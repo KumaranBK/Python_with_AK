@@ -1,0 +1,18 @@
+def is_invalid_input(name):
+        if name.startswith(' '):
+        raise ValueError("Invalid input: cannot start with a space.")
+    return True
+
+def validate_names(name1, name2):
+    try:
+        is_invalid_input(name1)
+        is_invalid_input(name2)
+        print("Both names are valid!")
+    except ValueError as e:
+        print(e)
+
+name1 = input("Enter the first person name:\n")
+name2 = input("Enter the second person name:\n")
+
+validate_names(name1,name2)
+        
