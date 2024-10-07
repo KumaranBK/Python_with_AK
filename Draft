@@ -1,0 +1,21 @@
+import re
+def is_invalid_input(name):
+        if name.startswith(' ') or bool(re.search(r'[\d\W]', name)) and not re.search(r'\s', name):
+            raise ValueError("Invalid input: cannot start with a space.")
+        return True
+
+def validate_names(name1, name2):
+    try:
+        is_invalid_input(name1)
+        is_invalid_input(name2)
+        print("Both names are valid!")
+    except ValueError as e:
+        print(e)
+
+name1 = input("Enter the first person name:\n").strip()
+name2 = input("Enter the second person name:\n").strip()
+
+validate_names(name1,name2)
+
+print(name1)
+print(name2)
