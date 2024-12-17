@@ -1,0 +1,6 @@
+# Score Prediction:
+bowled_overs = float(input("Enter the number of overs bowled: "))
+runs = int(input("Enter the current score: "))
+runs_per_over = runs / bowled_overs
+projected_score = runs_per_over * 50
+print(f" projected score for 50 overs is:{projected_score:.2f}")
